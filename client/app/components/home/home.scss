@@ -1,3 +1,30 @@
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 .home {
-  color: red;
+	color: red;
+}
+.editable-box{
+	background-color: #fff;
+	padding: 3em;
+	max-width: 505px;
+	margin: 0 auto;
+	box-shadow: 1px 1px 10px #DDD;
+	box-sizing: border-box;
+	h1{
+		font-family: 'Ubuntu', sans-serif;
+		color: #333;
+		font-size: 3.2em;
+		margin:.3em 0;
+	}
+	.photo{
+		width: calc(100% + 3em);
+		margin-right: -3em;
+	}
+	.url{
+		font-family: Verdana, Geneva, sans-serif;
+		font-weight: bold;
+		color:#BBB;
+		font-size: 12pt;
+		text-transform: uppercase;
+		margin:.5em 0;
+	}
 }
