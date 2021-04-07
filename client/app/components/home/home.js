@@ -1,9 +1,10 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import homeComponent from './home.component';
+import * as Quill from 'quill';
 
 let homeModule = angular.module('home', [
-  uiRouter
+  uiRouter, Quill
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
