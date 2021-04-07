@@ -1,8 +1,8 @@
 <main>
   <div class="editable-box">
-    <img src="/assets/head-default-logo.png" class="head-logo">
-    <h1>Give your team autonomy while preserving the visual identity of your company</h1>
-    <img src="/assets/default-photo.png" class="photo">
-    <p class="url">www.tradetools.co</p>
+    <img src="{{$ctrl.logo}}" class="head-logo" ng-click="openModalImg">
+    <h1 ng-click="qEditor">{{$ctrl.titulo}}</h1>
+    <img src="{{$ctrl.photo}}" class="photo" ng-click="openModalImg">
+    <p class="url qeditor" ng-click="$ctrl.qEditor($event)">{{$ctrl.website}}</p>
   </div>
 </main>

@@ -1,5 +1,9 @@
 @import "common/common";
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
 
+[ng-quill-editor] { display: block; }
 body{
 	background-color: #f5f6f8;
 }

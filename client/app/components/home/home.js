@@ -1,10 +1,11 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import homeComponent from './home.component';
-import * as Quill from 'quill';
+import ngSanitize from 'angular-sanitize';
+import ngQuill from 'ng-quill';
 
 let homeModule = angular.module('home', [
-  uiRouter, Quill
+  uiRouter, 'ngSanitize', 'ngQuill'
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
