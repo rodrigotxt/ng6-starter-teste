@@ -1,3 +1,24 @@
+# DESAFIO DZIGUAL
+**Instruções para Instalação:**
+* clonar repositório
+* npm install
+* npm run watch
+
+> Também pode ser utilizado o **yarn**, ao invés do npm.
+
+> Versão utilizada do Node: **10.24.1** / NPM: **7.7.4**
+
+> **Dificuldades do Desafio:**
+>> Levei um tempo pra conseguir encontrar a versão correta pra funcionar o ng6-starter, pois utilizava a última versão do Node e era incompatível, pois esse repositório e alguns pacotes tem cerca de 4 anos.
+
+>> O último projeto que tinha feito no Angular, foi na versão 8, essa versão tem algumas diferenças de sintaxe, etc.
+
+>> Há muito tempo adotei o Vue.js para desenvolvimento, então muitas convenções e metódos do Angular, ainda são 'estranhas' pra mim, mas nada que uma maratona de estudo na documentação não resolva.
+>> 
+
+
+<hr>
+
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/1016365/9864650/93a5660a-5b00-11e5-8716-a0d538d12913.png" alt="ng6-starter" width="480px;" >
   <!-- old img url: http://res.cloudinary.com/angularclass/image/upload/v1431802814/ng6_vrmd60.png -->
