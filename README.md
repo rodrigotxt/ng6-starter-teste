@@ -1,6 +1,7 @@
 # DESAFIO DZIGUAL
 **Instruções para Instalação:**
 * clonar repositório
+* npm i gulp -g (se não estiver instalado)
 * npm install
 * npm run watch
 
