@@ -1,8 +1,9 @@
 <main>
-  <div class="editable-box">
-    <img src="{{$ctrl.logo}}" class="head-logo" ng-click="openModalImg">
-    <h1 ng-click="qEditor">{{$ctrl.titulo}}</h1>
-    <img src="{{$ctrl.photo}}" class="photo" ng-click="openModalImg">
-    <p class="url qeditor" ng-click="$ctrl.qEditor($event)">{{$ctrl.website}}</p>
-  </div>
+	<div class="editable-box">
+		<img src="{{$ctrl.logo}}" class="head-logo" ng-click="openModalImg">
+		<ng-quill-editor on-blur="$ctrl.onBlurEditor(editor, source)" on-focus="$ctrl.onFocusEditor(editor, source)" read-only="true" class="h1" format="inline" theme="bubble" ng-model="$ctrl.titulo" modules="{toolbar: ['bold', 'italic', 'underline', 'strike']}" attributes="['header': 1]"></ng-quill-editor>
+		<img src="{{$ctrl.photo}}" class="photo" ng-click="openModalImg">		
+		<ng-quill-editor class="url qeditor" format="inline" theme="bubble" ng-model="$ctrl.website" modules="{toolbar: ['bold', 'italic', 'underline', 'strike']}"></ng-quill-editor>
+	</ng-quill-editor>
+</div>
 </main>
