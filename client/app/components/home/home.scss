@@ -1,30 +1,91 @@
  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-.home {
-	color: red;
-}
-.editable-box{
-	background-color: #fff;
-	padding: 3em;
-	max-width: 505px;
-	margin: 3em auto;
-	box-shadow: 1px 1px 10px #DDD;
-	box-sizing: border-box;
-	h1, .h1 .ql-editor{
-		font-family: 'Ubuntu', sans-serif;
-		color: #333;
-		font-size: 2em;
-		margin:.3em 0;
-	}
-	.photo{
-		width: calc(100% + 3em);
-		margin-right: -3em;
-	}
-	.url{
-		font-family: Verdana, Geneva, sans-serif;
-		font-weight: bold;
-		color:#BBB;
-		font-size: 12pt;
-		text-transform: uppercase;
-		margin:.5em 0;
-	}
-}
+ .home {
+ 	color: red;
+ }
+ .editable-box{
+ 	.head-logo{
+ 		max-height:30px;
+ 		&:hover{
+ 			opacity: 0.7;
+ 			cursor: alias;
+ 		}
+ 	}
+ 	background-color: #fff;
+ 	padding: 3em;
+ 	max-width: 505px;
+ 	margin: 3em auto;
+ 	box-shadow: 1px 1px 10px #DDD;
+ 	box-sizing: border-box;
+ 	h1, .h1 .ql-editor{
+ 		font-family: 'Ubuntu', sans-serif;
+ 		color: #333;
+ 		font-size: 2em;
+ 		margin:.3em 0;
+ 	}
+ 	.photo{
+ 		width: calc(100% + 3em);
+ 		margin-right: -3em;
+ 		&:hover{
+ 			opacity: 0.7;
+ 			cursor: alias;
+ 		}
+ 	}
+ 	.url{
+ 		font-family: Verdana, Geneva, sans-serif;
+ 		font-weight: bold;
+ 		color:#BBB;
+ 		font-size: 12pt;
+ 		text-transform: uppercase;
+ 		margin:.5em 0;
+ 	}
+ }
+ #modal{
+ 	box-sizing: border-box;
+ 	padding:2em;
+ 	position: absolute;
+ 	top: 0;
+ 	height: 100vh;
+ 	width: 100vw;
+ 	background-color: #969c9dc4;
+ 	overflow-y: scroll;
+ 	backdrop-filter: blur(5px);
+ 	h3{
+ 		font-size: 3em;
+ 		text-align: center;
+ 	}
+ 	a.close{
+ 		text-decoration: none;
+ 		font-size: 25pt;
+ 		padding:.2em .5em;
+ 		border-radius: 1em;
+ 		color:#fff;
+ 		background-color: darkred;
+ 		position: absolute;
+ 		right:10px;
+ 		top:10px;
+ 	}
+ 	.footer{
+ 		clear: both;
+ 		text-align: center;
+ 		font-size: 11px;
+ 	}
+ 	figure{
+ 		float: left;
+ 		margin: 1em auto;
+ 		padding:1em;
+ 		img{
+ 			background-color: #fff;
+ 			padding:1em;
+ 			max-height: 80px;
+ 			transition: 0.3s all;
+ 			border: 3px solid #AAA;
+ 			box-shadow: 2px 3px 5px #999;
+ 			&:hover{
+ 				border-color: #DDD;
+ 				box-shadow: 2px 3px 7px #222;
+ 				cursor: pointer;
+ 			}
+ 		}
+ 	}
+
+ }
