@@ -3,7 +3,7 @@ class HomeController {
 		"ngInject";
 		this.$http = $http;
 		this.$scope = $scope;
-		$scope.name = 'home';
+		this.name = 'home';
 		$scope.logo = '/assets/head-default-logo.png';
 		$scope.photo = '/assets/default-photo.png';
 		$scope.titulo = 'Give your team autonomy while preserving the visual identity of your company';
@@ -29,14 +29,16 @@ class HomeController {
 			result: []
 		};
 	}
+	// busca a url no array e formata de acordo com o 'type'
 	getImg(item){
-		// console.log(this.$scope.galeria.type, item);
 		return this.$scope.galeria.types[this.$scope.galeria.type].format(item);
 	}
+	// retorna o 'type' da galeria ativa
 	getTypeGaleria(){
 		if(!this.$scope.galeria.type) return;
 		return this.$scope.galeria.types[this.$scope.galeria.type];
 	}
+	// busca imagens no API conforme o type
 	getGaleria(type, params = null){
 		let self = this;
 		self.$scope.galeria.type = type;
@@ -44,14 +46,15 @@ class HomeController {
 		let url = typeParams.url;
 		let options = null;
 
+		// se nos parametros possuir api_key entao adiciona Authorization no Header
 		if(typeParams.api_key){
-			// let headers = new Headers({'Content-Type': 'application/json'});
 			options = {headers: {
 				'Authorization': typeParams.api_key,
 				'Accept': 'application/json',
 			}};
 		}
 
+		// faz requisicao para API externa
 		this.$http.get(url, options)
 		.then(
 			(response) =>{
@@ -64,10 +67,8 @@ class HomeController {
 			(error) => {
 				console.log(error);
 			});
-		// return axios.get('https://raw.githubusercontent.com/gilbarbara/logos/master/logos.json');
-		//?query=nature&per_page=5
-		// return;
 	}
+	// define a imagem no bloco de Edicao
 	setImage(item, type){
 		let url = this.getImg(item);
 		if(type == 'icon') this.$scope.logo = url;
@@ -75,10 +76,12 @@ class HomeController {
 		this.$scope.galeria.open = false;
 		this.$scope.galeria.result = [];
 	}
+	// desabilita quill se perder o Foco
 	onBlurEditor(editor, source){
 		editor.disable();
 		editor.off();
 	}
+	// habilitar o quill ao dar foco no elemento
 	onFocusEditor(editor, source){
 		editor.enable();
 		editor.focus();

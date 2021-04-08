@@ -46,9 +46,5 @@ describe('Home', () => {
       scope.$apply();
     });
 
-    it('has name in template', () => {
-      expect(template.find('h1').html()).to.eq('Found in home.html');
-    });
-
   });
 });
